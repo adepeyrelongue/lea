@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{ post_detail.title}}</h1>
+<img src="{{post_detail.image_src}}" alt="" style="width:100%;">
+
+{{post_detail.body|safe}}
+
+{% endblock content %}

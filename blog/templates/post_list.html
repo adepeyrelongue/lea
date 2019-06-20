@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Derniers articles</h1>
+<div class="row">
+    {% for post in post_list %}
+    <div class="col-sm-6">
+        <div class="card">
+            <img class="card-img-top" src="{{ post.image_src }}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{ post.title }}</h5>
+                <p class="card-text">{{ post.pitch }}</p>
+                <a href="{{post.get_absolute_url}}" class="btn btn-primary">Lire l'article</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}

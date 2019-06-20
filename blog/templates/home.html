@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{first_page.title}}</h1>
+
+{{first_page.first_part|safe}}
+
+{% for product in product_list %}
+{% include "sub-templates/product-pitch.html" %}
+{% endfor %}
+
+{{first_page.last_part|safe}}
+
+{% endblock content %}
