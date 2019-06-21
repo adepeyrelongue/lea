@@ -1,17 +1,27 @@
-{{ product.name }}
+<h2>Le skateboard électrique {{ product.name }} </h2>
 <div class="row">
     <div class="col-md-6">
         <img src="{{ product.image_src }}" alt="">
     </div>
     <div class="col-md-6">
         <p>
-            {{ product.image_src }}
+            <b>En bref: </b> {{ product.resume }}
         </p>
     </div>
     <div class="col-md-6">
-        {{ product.image_src }}
+        <h5>Les caraceristiques</h5>
     </div>
     <div class="col-md-6">
-        <a href="{{ product.url }}" target="_blank">Voir sur amazon</a>
+        <a class="btn btn-primary" href="{{ product.url }}" target="_blank">Voir sur amazon</a>
     </div>
+    <div class="col-md-6">
+        <h5>Les points faibles</h5>
+        points faibles
+    </div>
+
+    <div class="col-md-6">
+        <h5>Les points forts</h5>
+        points forts
+    </div>
+
 </div>
