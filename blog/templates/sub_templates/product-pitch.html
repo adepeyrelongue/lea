@@ -1,27 +1,50 @@
-<h2>Le skateboard électrique {{ product.name }} </h2>
-<div class="row">
-    <div class="col-md-6">
-        <img src="{{ product.image_src }}" alt="">
+<div class="product-pitch">
+    <h2>Le skateboard électrique {{ product.short_name }} </h2>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="img-container">
+                <img src="{{ product.image_src }}" alt="">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <p>
+                <b>En bref: </b> {{ product.resume }}
+            </p>
+        </div>
     </div>
-    <div class="col-md-6">
-        <p>
-            <b>En bref: </b> {{ product.resume }}
-        </p>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="caracteristics-container">
+                <h5>Les caractéristiques</h5>
+                <ul>
+                    <li><strong>Vitesse Max : </strong>{{product.speed_max}} Km/h</li>
+                    <li><strong>Autonomie : </strong>{{product.autonomy}} Kms</li>
+                    <li><strong>Poids Maximum :&nbsp;</strong>{{product.user_weight_max}} Kg</li>
+                    <li><strong>Composition&nbsp;:&nbsp;</strong>{{product.composition}}</li>
+                    <li><strong>Dimensions&nbsp;:&nbsp;</strong>{{product.dimensions}}</li>
+                    <li><strong>Poids&nbsp;: </strong>{{product.weight}} Kg</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="stars-link-container">
+                {% include "sub_templates/product-stars.html" %}
+                <a class="btn btn-primary" href="{{ product.url }}" target="_blank">Voir sur amazon</a>
+            </div>
+        </div>
     </div>
-    <div class="col-md-6">
-        <h5>Les caraceristiques</h5>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="cons-container">
+                <h5>Les points faibles</h5>
+                {{product.cons|safe}}
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="pros-container">
+                <h5>Les points forts</h5>
+                {{product.pros|safe}}
+            </div>
+        </div>
     </div>
-    <div class="col-md-6">
-        <a class="btn btn-primary" href="{{ product.url }}" target="_blank">Voir sur amazon</a>
-    </div>
-    <div class="col-md-6">
-        <h5>Les points faibles</h5>
-        points faibles
-    </div>
-
-    <div class="col-md-6">
-        <h5>Les points forts</h5>
-        points forts
-    </div>
-
 </div>

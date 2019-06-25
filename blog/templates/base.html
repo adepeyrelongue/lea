@@ -16,6 +16,7 @@
         crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
     <title>Meilleur skate électrique</title>
@@ -59,16 +60,8 @@
                         <div class="white-content">
                             <h2>Les mieux notés</h2>
                             {% for product in product_list %}
-                            <a href="{{ product.url }}" class="product-box" target="_blank">
-                                <div class="card">
-                                    <img class="card-img-top" style="width:200px;margin:auto;"
-                                        src="{{ product.image_src }}" alt="Card image cap">
 
-                                    <div class="card-body">
-                                        <h5 class="card-title">{{ product.name }}</h5>
-                                    </div>
-                                </div>
-                            </a>
+                            {% include "sub_templates/product-box.html" %}
 
                             {% endfor %}
                         </div>

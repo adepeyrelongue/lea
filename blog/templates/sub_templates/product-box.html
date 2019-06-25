@@ -1,0 +1,12 @@
+<a href="{{ product.url }}" class="product-box" target="_blank">
+    <div class="card">
+        <img class="card-img-top" src="{{ product.image_src }}" alt="{{ product.image_alt }}">
+        <div class="card-body">
+            <h5 class="card-title">{{ product.short_name }}</h5>
+            <div class="product-stars-container">
+                {% include "sub_templates/product-stars.html" %}
+            </div>
+            <span class="btn btn-primary" href="{{ product.url }}" target="_blank">Voir sur amazon</span>
+        </div>
+    </div>
+</a>
