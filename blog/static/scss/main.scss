@@ -17,7 +17,8 @@ html {
 }
 
 header {
-  background: white;
+  display: none;
+  opacity: 0.8;
   margin: 0;
 }
 
@@ -148,10 +149,10 @@ a.btn {
 }
 
 body {
-  /* background: rgb(234, 241, 255);
-    background: url("https://www.mellowboards.com/out/pictures/zmbwysiwygeditor/Blog-Posts/mellow-electric-skateboard-what-is-an-electric-skateboard-2.jpg");
-    background-position: center;*/
-  background: rgb(234, 241, 255);
+  background: url("https://www.mellowboards.com/out/pictures/zmbwysiwygeditor/Blog-Posts/mellow-electric-skateboard-what-is-an-electric-skateboard-2.jpg");
+  background-position: center;
+  background-attachment: fixed;
+
   background-size: 2000px;
   background-repeat: no-repeat;
 }
@@ -180,7 +181,10 @@ footer {
 
 //resume
 .product-pitch {
-  border-top: 2px solid #444;
+  border-top: 2px solid rgb(230, 230, 230);
+  h5 {
+    padding: 2px;
+  }
   .stars-link-container {
     padding: 20px;
     height: 100%;
@@ -200,26 +204,13 @@ footer {
   .caracteristics-container {
     margin-top: 10px;
     margin-bottom: 10px;
-    h5 {
-      padding: 2px;
-    }
   }
   .cons-container {
-    h5 {
-      background-color: $red;
-      color: white;
-      padding: 2px;
-    }
     ul {
       color: $red;
     }
   }
   .pros-container {
-    h5 {
-      background-color: $green;
-      color: white;
-      padding: 2px;
-    }
     ul {
       color: $green;
     }

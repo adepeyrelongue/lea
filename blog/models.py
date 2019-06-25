@@ -54,6 +54,8 @@ class Product(models.Model):
           return str
 
 class Post(models.Model):
+    html_title = models.CharField(max_length=500,default="")
+    html_meta = models.TextField(default="")
     title = models.CharField(max_length=200,default="")
     slug = models.SlugField(unique=True, default="")
     image_src = models.CharField(max_length=500,default="")
@@ -72,6 +74,8 @@ class Post(models.Model):
         return reverse('post-detail', kwargs={"slug" : self.slug})
 
 class FirstPage(models.Model):
+    html_title = models.CharField(max_length=500,default="")
+    html_meta = models.TextField(default="")
     title = models.CharField(max_length=200,default="")
     first_part = RichTextField(default="")
     last_part = RichTextField(default="")
